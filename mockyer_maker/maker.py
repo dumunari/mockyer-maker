@@ -61,8 +61,8 @@ def request_size(request_path, request_query):
 
 
 def full_request_with_digest(request_path, request_query):
-    return request_path + '?' \
-           + hashlib.sha1(('?' + retrieve_encoded_request_query(request_query)).encode('utf-8')).hexdigest()
+    return request_path + '%3f' \
+           + hashlib.sha1(('%3f' + retrieve_encoded_request_query(request_query)).encode('utf-8')).hexdigest()
 
 
 def retrieve_full_request_with_query_param(request, request_path):
@@ -71,7 +71,7 @@ def retrieve_full_request_with_query_param(request, request_path):
         return full_request_with_digest(request_path=request_path,
                                         request_query=request_query)
     else:
-        return request_path + '?' + retrieve_encoded_request_query(request_query)
+        return request_path + '%3f' + retrieve_encoded_request_query(request_query)
 
 
 def retrieve_full_request(request, request_path):
