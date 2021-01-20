@@ -1,6 +1,6 @@
 # mockyer-maker
 
-This application creates Tshield shaped mocks from Hoverfly's exported files.
+This application creates [Tshield](https://github.com/diegorubin/tshield) shaped mocks from [Hoverfly's](https://github.com/spectolabs/hoverfly) exported files.
 
 # How to create my mocks?
 
